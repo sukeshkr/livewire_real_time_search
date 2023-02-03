@@ -10,7 +10,7 @@
         <div class="modal-body">
             <div class="mb-3">
                 <label>Student Name</label>
-                <input type="text" wire:model.lazy='name' class="form-control">
+                <input type="text" wire:model='name' class="form-control">
                 @error('name') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="mb-3">
@@ -31,8 +31,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" wire:click="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button wire:loading.remove type="submit"  class="btn btn-primary">Save</button>
-          <button class="btn btn-primary" wire:loading>saving....</button>
+          <button wire:loading.attr="disabled" type="submit"  class="btn btn-primary">Save</button>
+          {{-- <button class="btn btn-primary" wire:loading>saving....</button> --}}
         </div>
         </form>
       </div>

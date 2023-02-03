@@ -58,6 +58,7 @@ class Student extends Component
     public function closeModal()
     {
         $this->resetInput();
+        $this->resetValidation();
 
     }
     public function editStudent(int $studentId)
@@ -94,6 +95,7 @@ class Student extends Component
         $this->name='';
         $this->email='';
         $this->course='';
+        $this->images =[];
 
     }
     public function deleteStudent(int $studentId)
